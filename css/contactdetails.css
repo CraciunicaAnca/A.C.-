@@ -1,0 +1,116 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+} /* to place the contact form in the center of the page*/
+
+body{
+	height: 100vh;
+	width: 100%; /* to place the contact form in the center of the page*/
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}/*to style the contact-form box*/
+
+.container:after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: white;
+}/*to style the background under the contact form*/
+
+.contact-form{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #FDF8F5;
+	box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.40);/*to create a light shadow for the illusion of deep*/
+}
+
+.left-side{
+	background: url("/Users/ancacraciunica/Desktop/web development/HTML- Personal Site/images/Murda.jpeg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right-side{
+	padding: 25px 40px;
+}/*left and right is the way I split the contactform in two sides, a left one and a right one. The left one is to display the picture of my cat, the right one is for the user input and enquery.*/
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}/*to stile the "Let's get in touch"*/
+
+h2:after{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #black; /*to stile the "Let's get in touch"*/
+}
+
+.field{
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 2);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s; /*to style "your name", "your email", "your number phone"*/
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}/*when the user move the pointer over "your name" etc... it will create a slight hover*/
+
+textarea{
+	min-height: 140px;/*the size of the enquery box*/
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 0.9rem;
+	background-color: #DDAF94;
+	color: black;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: .3s; /*to style the button*/
+
+}
+
+.btn:hover{
+    background-color: #FDF8F5;/*to style the button*/
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: white;
+} /*when a user start typing, it becomes white to help them focus*/
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px; /*to adapt the way the page will behave on different devices*/
+	}
+}
